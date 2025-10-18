@@ -10,6 +10,8 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Objects;
+
 @Getter
 @Setter
 @Entity
@@ -37,5 +39,25 @@ public class Empleado {
 
     @Column(name = "telefono")
     private Integer telefono;
+
+    public Empleado(Integer id, String tipoDocumento, Integer numeroDocumento, String nombreEmpleado, String correo, Integer telefono) {
+        this.id = id;
+        this.tipoDocumento = tipoDocumento;
+        this.numeroDocumento = numeroDocumento;
+        this.nombreEmpleado = nombreEmpleado;
+        this.correo = correo;
+        this.telefono = telefono;
+    }
+
+
+    public Empleado() {
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Empleado empleado = (Empleado) o;
+        return Objects.equals(id, empleado.id) && Objects.equals(tipoDocumento, empleado.tipoDocumento) && Objects.equals(numeroDocumento, empleado.numeroDocumento) && Objects.equals(nombreEmpleado, empleado.nombreEmpleado) && Objects.equals(correo, empleado.correo) && Objects.equals(telefono, empleado.telefono);
+    }
 
 }

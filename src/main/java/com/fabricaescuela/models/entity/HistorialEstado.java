@@ -1,6 +1,7 @@
 package com.fabricaescuela.models.entity;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -39,4 +40,26 @@ public class HistorialEstado {
     @Column(name = "fechaHora")
     private LocalDate fechaHora;
 
+    public HistorialEstado(Integer id, Empleado idEmpleado, Paquete idPaquete, Estado idEstado, LocalDate fechaHora) {
+        this.id = id;
+        this.idEmpleado = idEmpleado;
+        this.idPaquete = idPaquete;
+        this.idEstado = idEstado;
+        this.fechaHora = fechaHora;
+    }
+
+    public HistorialEstado() {
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        HistorialEstado that = (HistorialEstado) o;
+        return Objects.equals(id, that.id) && Objects.equals(idEmpleado, that.idEmpleado) && Objects.equals(idPaquete, that.idPaquete) && Objects.equals(idEstado, that.idEstado) && Objects.equals(fechaHora, that.fechaHora);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, idEmpleado, idPaquete, idEstado, fechaHora);
+    }
 }

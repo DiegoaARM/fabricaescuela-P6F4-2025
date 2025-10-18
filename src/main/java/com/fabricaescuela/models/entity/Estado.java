@@ -10,6 +10,8 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Objects;
+
 @Getter
 @Setter
 @Entity
@@ -28,4 +30,24 @@ public class Estado {
     @Column(name = "descripcionEstado")
     private String descripcionEstado;
 
+    public Estado() {
+    }
+
+    public Estado(Integer id, String nombreEstado, String descripcionEstado) {
+        this.id = id;
+        this.nombreEstado = nombreEstado;
+        this.descripcionEstado = descripcionEstado;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Estado estado = (Estado) o;
+        return Objects.equals(id, estado.id) && Objects.equals(nombreEstado, estado.nombreEstado) && Objects.equals(descripcionEstado, estado.descripcionEstado);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nombreEstado, descripcionEstado);
+    }
 }

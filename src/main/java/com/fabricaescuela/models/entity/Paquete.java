@@ -16,37 +16,49 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-@Entity
-@Table(name = "paquetes")
-public class Paquete {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idPaquete", nullable = false)
-    private Integer id;
+    @Getter
+    @Setter
+    @Entity
+    @Table(name = "paquetes")
+    public class Paquete {
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        @Column(name = "idPaquete", nullable = false)
+        private Integer id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idEmpleadoResponsable")
-    private Empleado idEmpleadoResponsable;
+        @ManyToOne(fetch = FetchType.LAZY)
+        @JoinColumn(name = "idEmpleadoResponsable")
+        private Empleado idEmpleadoResponsable;
 
-    @Size(max = 255)
-    @Column(name = "codigoPaquete")
-    private String codigoPaquete;
+        @Size(max = 255)
+        @Column(name = "codigoPaquete")
+        private String codigoPaquete;
 
-    @Size(max = 70)
-    @Column(name = "remitente", length = 70)
-    private String remitente;
+        @Size(max = 70)
+        @Column(name = "remitente", length = 70)
+        private String remitente;
 
-    @Size(max = 70)
-    @Column(name = "destinatario", length = 70)
-    private String destinatario;
+        @Size(max = 70)
+        @Column(name = "destinatario", length = 70)
+        private String destinatario;
 
-    @Column(name = "fechaRegistro")
-    private LocalDate fechaRegistro;
+        @Column(name = "fechaRegistro")
+        private LocalDate fechaRegistro;
 
-    @Size(max = 30)
-    @Column(name = "destino", length = 30)
-    private String destino;
+        @Size(max = 30)
+        @Column(name = "destino", length = 30)
+        private String destino;
 
-}
+        public Paquete(Integer id, Empleado idEmpleadoResponsable, String codigoPaquete, String remitente, String destinatario, LocalDate fechaRegistro, String destino) {
+            this.id = id;
+            this.idEmpleadoResponsable = idEmpleadoResponsable;
+            this.codigoPaquete = codigoPaquete;
+            this.remitente = remitente;
+            this.destinatario = destinatario;
+            this.fechaRegistro = fechaRegistro;
+            this.destino = destino;
+        }
+
+        public Paquete() {
+        }
+    }

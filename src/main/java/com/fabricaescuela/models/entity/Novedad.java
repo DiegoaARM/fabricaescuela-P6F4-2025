@@ -40,4 +40,14 @@ public class Novedad {
     @Column(name = "fechaHora")
     private LocalDate fechaHora;
 
+    public Novedad(Integer id, Paquete idPaquete, String tipoNovedad, String descripcion, LocalDate fechaHora) {
+        this.id = id;
+        this.idPaquete = idPaquete;
+        this.tipoNovedad = tipoNovedad;
+        this.descripcion = descripcion;
+        this.fechaHora = fechaHora;
+    }
+
+    public Novedad() {
+    }
 }
