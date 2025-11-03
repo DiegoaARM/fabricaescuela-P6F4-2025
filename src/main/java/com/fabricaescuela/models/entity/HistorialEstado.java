@@ -39,4 +39,14 @@ public class HistorialEstado {
     @Column(name = "fechaHora")
     private LocalDate fechaHora;
 
+    public HistorialEstado() {
+    }
+
+    public HistorialEstado(Integer id, Empleado idEmpleado, Paquete idPaquete, Estado idEstado, LocalDate fechaHora) {
+        this.id = id;
+        this.idEmpleado = idEmpleado;
+        this.idPaquete = idPaquete;
+        this.idEstado = idEstado;
+        this.fechaHora = fechaHora;
+    }
 }

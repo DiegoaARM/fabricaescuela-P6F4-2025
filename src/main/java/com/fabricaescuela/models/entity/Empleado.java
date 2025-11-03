@@ -38,4 +38,15 @@ public class Empleado {
     @Column(name = "telefono")
     private Long telefono;
 
+    public Empleado() {
+    }
+
+    public Empleado(Integer id, String tipoDocumento, Integer numeroDocumento, String nombreEmpleado, String correo, Long telefono) {
+        this.id = id;
+        this.tipoDocumento = tipoDocumento;
+        this.numeroDocumento = numeroDocumento;
+        this.nombreEmpleado = nombreEmpleado;
+        this.correo = correo;
+        this.telefono = telefono;
+    }
 }

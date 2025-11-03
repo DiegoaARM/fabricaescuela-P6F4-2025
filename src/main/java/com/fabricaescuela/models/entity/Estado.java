@@ -28,4 +28,12 @@ public class Estado {
     @Column(name = "descripcionEstado")
     private String descripcionEstado;
 
+    public Estado() {
+    }
+
+    public Estado(Integer id, String nombreEstado, String descripcionEstado) {
+        this.id = id;
+        this.nombreEstado = nombreEstado;
+        this.descripcionEstado = descripcionEstado;
+    }
 }

@@ -49,4 +49,16 @@ public class Paquete {
     @Column(name = "destino", length = 30)
     private String destino;
 
+    public Paquete() {
+    }
+
+    public Paquete(Integer id, Empleado idEmpleadoResponsable, String codigoPaquete, String remitente, String destinatario, LocalDate fechaRegistro, String destino) {
+        this.id = id;
+        this.idEmpleadoResponsable = idEmpleadoResponsable;
+        this.codigoPaquete = codigoPaquete;
+        this.remitente = remitente;
+        this.destinatario = destinatario;
+        this.fechaRegistro = fechaRegistro;
+        this.destino = destino;
+    }
 }
