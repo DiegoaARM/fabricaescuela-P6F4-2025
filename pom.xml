@@ -112,23 +112,21 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-            <configuration>
-                <mainClass>com.fabricaescuela.InventarioApplication</mainClass>
-            </configuration>
+				<configuration>
+					<mainClass>com.fabricaescuela.InventarioApplication</mainClass>
+				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.12</version> <!-- revisa si hay versión más reciente -->
+				<version>0.8.12</version>
 				<executions>
-					<!-- instrumentar y recoger datos durante test -->
 					<execution>
 						<goals>
 							<goal>prepare-agent</goal>
 						</goals>
 					</execution>
-
-					<!-- generar reporte después de los tests -->
 					<execution>
 						<id>report</id>
 						<phase>verify</phase>
@@ -136,8 +134,6 @@
 							<goal>report</goal>
 						</goals>
 					</execution>
-
-					<!-- opcional: comprobar umbrales y fallar si no se cumplen -->
 					<execution>
 						<id>check</id>
 						<goals>
@@ -151,7 +147,7 @@
 										<limit>
 											<counter>LINE</counter>
 											<value>COVEREDRATIO</value>
-											<minimum>0.75</minimum> <!-- 75% mínimo, ajústalo -->
+											<minimum>0.75</minimum>
 										</limit>
 										<limit>
 											<counter>INSTRUCTION</counter>
@@ -165,6 +161,14 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<!-- 🔹 SONARCLOUD PLUGIN -->
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.11.0.3922</version>
+			</plugin>
+
 		</plugins>
 		<finalName>fe</finalName>
 	</build>
