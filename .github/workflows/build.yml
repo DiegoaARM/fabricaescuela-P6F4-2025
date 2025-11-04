@@ -1,4 +1,5 @@
 name: CI/CD Pipeline
+
 on:
   workflow_dispatch:
   push:
@@ -8,36 +9,55 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  tests:
-    name: Unit tests
+  build-and-analyze:
+    name: Build, Test & SonarCloud Analysis
     runs-on: ubuntu-latest
-    
+
     steps:
-      # Check-out your repository under $GITHUB_WORKSPACE, so your workflow can access it
-      - uses: actions/checkout@v1
-      
-      # Set up JDK 21
-      - name: Set up JDK 21 and cache Maven
-        uses: actions/setup-java@v3
+      # Checkout del repositorio
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Requerido para análisis completo en SonarCloud
+
+      # Configuración de JDK 21
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '21'
+          java-version: 21
           cache: 'maven'
 
-      - name: Verificar Java
+      # Verificar versiones
+      - name: Verificar Java y Maven
         run: |
           java -version
           mvn -v
-      
-      # Set up Maven cache
+
+      # Cache de dependencias Maven
       - name: Cache Maven packages
-        # This action allows caching dependencies and build outputs to improve workflow execution time.
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
-      
-      # Run Tests
-      - name: Run Tests
+
+      # Cache de dependencias Sonar
+      - name: Cache SonarQube packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
+      # Ejecutar pruebas
+      - name: Run Unit Tests
         run: mvn -B test
+
+      # Análisis en SonarCloud
+      - name: SonarCloud Analysis
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+          -Dsonar.projectKey=DiegoaARM_fabricaescuela-P6F4-2025 \
+          -Dsonar.organization=diegoaarm \
+          -Dsonar.host.url=https://sonarcloud.io

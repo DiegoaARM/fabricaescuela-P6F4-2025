@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fabricaescuela</groupId>
-	<artifactId>inventario</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>inventario</name>
+	<artifactId>fabricaescuela-P6F4-2025</artifactId>
+	<name>fabricaescuela-P6F4-2025</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -28,6 +28,7 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
+		<sonar.organization>diegoaarm</sonar.organization>
 	</properties>
 	<dependencies>
 		<dependency>
