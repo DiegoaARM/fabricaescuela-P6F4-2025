@@ -1,6 +1,8 @@
 # 🚚 fabricaescuela-P6F4-2025 – CourierSync  
 
 [![CI/CD Pipeline](https://github.com/JUAN-VILLOTA/fabricaescuela-P6F4-2025/actions/workflows/build.yml/badge.svg)](https://github.com/JUAN-VILLOTA/fabricaescuela-P6F4-2025/actions/workflows/build.yml) 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DiegoaARM_fabricaescuela-P6F4-2025&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=DiegoaARM_fabricaescuela-P6F4-2025)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DiegoaARM_fabricaescuela-P6F4-2025&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=DiegoaARM_fabricaescuela-P6F4-2025)
 
 CourierSync es un sistema web para optimizar los procesos logísticos de transporte y distribución.  
 Este repositorio corresponde a la **Feature 4: Control de Inventario en Tránsito** dentro del proyecto de la Fábrica Escuela.  
