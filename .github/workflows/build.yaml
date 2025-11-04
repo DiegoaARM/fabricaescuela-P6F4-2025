@@ -57,7 +57,8 @@ jobs:
       - name: SonarCloud Analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-          -Dsonar.projectKey=DiegoaARM_fabricaescuela-P6F4-2025 \
-          -Dsonar.organization=diegoaarm \
-          -Dsonar.host.url=https://sonarcloud.io
+        run: |
+          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+            -Dsonar.projectKey=DiegoaARM_fabricaescuela-P6F4-2025 \
+            -Dsonar.organization=diegoaarm \
+            -Dsonar.host.url=https://sonarcloud.io
