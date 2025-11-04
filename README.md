@@ -1,6 +1,7 @@
 # 🚚 fabricaescuela-P6F4-2025 – CourierSync  
 
 [![CI/CD Pipeline](https://github.com/JUAN-VILLOTA/fabricaescuela-P6F4-2025/actions/workflows/build.yml/badge.svg)](https://github.com/JUAN-VILLOTA/fabricaescuela-P6F4-2025/actions/workflows/build.yml) 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DiegoaARM_fabricaescuela-P6F4-2025&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=DiegoaARM_fabricaescuela-P6F4-2025)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=DiegoaARM_fabricaescuela-P6F4-2025&metric=bugs)](https://sonarcloud.io/summary/new_code?id=DiegoaARM_fabricaescuela-P6F4-2025)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=DiegoaARM_fabricaescuela-P6F4-2025&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=DiegoaARM_fabricaescuela-P6F4-2025)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=DiegoaARM_fabricaescuela-P6F4-2025&metric=coverage)](https://sonarcloud.io/summary/new_code?id=DiegoaARM_fabricaescuela-P6F4-2025)
