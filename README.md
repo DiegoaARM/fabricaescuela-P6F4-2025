@@ -1,8 +1,14 @@
 # 🚚 fabricaescuela-P6F4-2025 – CourierSync  
 
 [![CI/CD Pipeline](https://github.com/JUAN-VILLOTA/fabricaescuela-P6F4-2025/actions/workflows/build.yml/badge.svg)](https://github.com/JUAN-VILLOTA/fabricaescuela-P6F4-2025/actions/workflows/build.yml) 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DiegoaARM_fabricaescuela-P6F4-2025&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=DiegoaARM_fabricaescuela-P6F4-2025)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DiegoaARM_fabricaescuela-P6F4-2025&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=DiegoaARM_fabricaescuela-P6F4-2025)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=DiegoaARM_fabricaescuela-P6F4-2025&metric=bugs)](https://sonarcloud.io/summary/new_code?id=DiegoaARM_fabricaescuela-P6F4-2025)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=DiegoaARM_fabricaescuela-P6F4-2025&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=DiegoaARM_fabricaescuela-P6F4-2025)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=DiegoaARM_fabricaescuela-P6F4-2025&metric=coverage)](https://sonarcloud.io/summary/new_code?id=DiegoaARM_fabricaescuela-P6F4-2025)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=DiegoaARM_fabricaescuela-P6F4-2025&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=DiegoaARM_fabricaescuela-P6F4-2025)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=DiegoaARM_fabricaescuela-P6F4-2025&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=DiegoaARM_fabricaescuela-P6F4-2025)
+
+
+
 
 CourierSync es un sistema web para optimizar los procesos logísticos de transporte y distribución.  
 Este repositorio corresponde a la **Feature 4: Control de Inventario en Tránsito** dentro del proyecto de la Fábrica Escuela.  
